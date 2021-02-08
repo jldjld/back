@@ -1,0 +1,8 @@
+{
+    "local": {
+        "DB_HOST": "127.0.0.1",
+        "DB_USER": "simplon",
+        "DB_PASSWORD": "1234",
+        "DB_NAME": "simplon_groupx"
+    }
+}
