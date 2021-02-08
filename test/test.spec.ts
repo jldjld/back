@@ -1,5 +1,5 @@
 import * as chai from "chai";
-import * as assert from "assert";
+import "mocha";
 
 const expect = chai.expect
 
