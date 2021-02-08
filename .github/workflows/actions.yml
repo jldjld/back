@@ -1,5 +1,4 @@
 name: group7-0
-description: ''
 on: [ push ]
 jobs:
   test:
