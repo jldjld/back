@@ -1,0 +1,14 @@
+name: group7-0
+description: ''
+on: [ push ]
+jobs:
+  test:
+  name: Run tests
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@dev
+    - uses: actions/setup-node@dev
+      with:
+        node-version: '15'
+    - run: npm install
+    - run: npm test
