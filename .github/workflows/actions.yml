@@ -1,5 +1,6 @@
 name: group7-0
-description: [ push ]
+description: ''
+on: [ push ]
 jobs:
   test:
   name: Run tests
