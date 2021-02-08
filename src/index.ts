@@ -1,10 +1,23 @@
-const express = require('express')
-const app = express()
+import { Args } from "./config/args"
+import { Config } from "./config/config.service"
+import { DB } from "./service/db.service"
 
-app.get('/', function (req, res) {
-    res.send('Hello World!')
+Args.required("env", ["local", "test", "beta", "prod"])
+const ENV = Args.get("env")
+//console.log(`Environment is ${ENV}`)
+
+Config.init(ENV)
+
+DB.init({ 
+    host: Config.get("DB_HOST"),
+    user: Config.get("DB_USER"),
+    password: Config.get("DB_PASSWORD"),
+    dbname: Config.get("DB_NAME"),
 })
 
-app.listen(3000, function () {
-    console.log('Votre app est disponible sur localhost:3000 !')
-})
+DB.query("SELECT * FROM users")
+    .then(results => {
+        console.log(results)
+    }).catch(e => {
+        console.log(e)
+    })
