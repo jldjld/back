@@ -21,6 +21,19 @@ jobs:
         ports:
           - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
+    - name: Send email
+    uses: AlexisMateo/sendmail-action@5
+    with:
+      smtp-server: smtp.gmail.com
+      smtp-server-port: 587
+      auth-user: lucas.harico@gmail.com
+      auth-password: Totorico69!123456789
+      subject: mail to Totorico69
+      body: test ok
+      from: lucas.harico@gmail.com
+      to: yovin56220@wirese.com
+      is-tls: false
+      commit-message: true
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
