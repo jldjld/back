@@ -14,8 +14,8 @@ class UserRepositoryService {
                     console.log(e)
                     reject(e)
                 })
-        })
-    )
+        }))
+    }
 
     addUser(name: string, email: string) 
     {
