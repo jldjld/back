@@ -1,23 +1,32 @@
-import { Args } from "./config/args"
-import { Config } from "./config/config.service"
-import { DB } from "./service/db.service"
+import * as dotenv from "dotenv"
+dotenv.config();
+import { Config, DB } from "./service"
 
-Args.required("env", ["local", "test", "beta", "prod"])
-const ENV = Args.get("env")
-//console.log(`Environment is ${ENV}`)
+const express = require("express");
+const bodyParser = require("body-parser");
 
-Config.init(ENV)
+const app = express();
 
-DB.init({ 
-    host: Config.get("DB_HOST"),
-    user: Config.get("DB_USER"),
-    password: Config.get("DB_PASSWORD"),
-    dbname: Config.get("DB_NAME"),
-})
+// parse requests of content-type: application/json
+app.use(bodyParser.json());
 
-DB.query("SELECT * FROM users")
-    .then(results => {
-        console.log(results)
-    }).catch(e => {
-        console.log(e)
-    })
+// parse requests of content-type: application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// simple route
+app.get("/", (req, res) => {
+    res.json({ message: "Welcome to my Api." });
+});
+
+
+// set port, listen for requests
+app.listen(3000, () => {
+    console.log("Server is running on port 3000.");
+});
+
+// DB.query("SELECT * FROM users")
+//     .then(results => {
+//         console.log(results)
+//     }).catch(e => {
+//         console.log(e)
+//     })
