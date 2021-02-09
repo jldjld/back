@@ -17,18 +17,18 @@ class UserRepositoryService {
         }))
     }
 
-    addUser(name: string, email: string) 
+    addUser(name: string, email: string) : Promise<any>
     {
-        // const queryString = `INSERT INTO users (name, email) VALUES (${name}, ${email});`
-        // return (new Promise((resolve, reject) => {
-        //     DB.query(queryString)
-        //         .then((results: any) => {
-        //             resolve(results)
-        //         })
-        //         .catch(e => {
-        //             reject(e)
-        //         })
-        // }))
+        const queryString = `INSERT INTO users (name, email) VALUES (${name}, ${email});`
+        return (new Promise((resolve, reject) => {
+            DB.query(queryString)
+                .then((results: any) => {
+                    resolve(results)
+                })
+                .catch(e => {
+                    reject(e)
+                })
+        }))
     }
 }
 
