@@ -27,6 +27,6 @@ jobs:
         with:
           node-version: '15'
       - name: Populate MySQL Database
-          run: bash pre-test.sh
+        run: bash pre-test.sh
       - run: npm install
       - run: npm run test
