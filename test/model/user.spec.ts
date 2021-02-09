@@ -1,12 +1,14 @@
 import * as dotenv from "dotenv"
+
+const envPath = __dirname + "../../.env.test"
+dotenv.config({path:envPath})
+
 import * as chai from "chai";
 import "mocha";
 import { User} from "../../src/models/User"; 
 
 const expect = chai.expect
 
-const envPath = __dirname + "../../.env.test"
-dotenv.config({path:envPath})
 
 const data = {
     id: 12,
