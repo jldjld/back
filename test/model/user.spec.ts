@@ -14,7 +14,7 @@ const user = new User(data);
 
 describe("Test User Model", () => {
 
-    it("verify if user model is valid", () => {
+    it("Check if user model is valid", () => {
         expect(user.id).to.equal(2),
         expect(user.name).to.equal("Toto"),
         expect(user).not.to.have.property("surname")
