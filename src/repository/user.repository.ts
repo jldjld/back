@@ -3,7 +3,7 @@ import { User } from "../models/User"
 
 class UserRepositoryService {
     
-    getUsers(limit: number = 10, offset: number = 0): Promise<Array<User>> {
+    getUsers(limit: number = 10, offset: number = 0): Promise<User[]> {
         const queryString = `SELECT id, name, email FROM users LIMIT ${limit} OFFSET ${offset}`;
         return (new Promise((resolve, reject) => {
             DB.query(queryString)
@@ -15,7 +15,7 @@ class UserRepositoryService {
                     reject(e)
                 })
         })
-    )}
+    )
 
     addUser(name: string, email: string) 
     {
