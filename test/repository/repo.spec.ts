@@ -1,6 +1,6 @@
 import * as dotenv from "dotenv"
 
-const envPath = __dirname + "../../.env.test"
+const envPath = __dirname + "/../../.env.test"
 console.log(envPath)
 dotenv.config({path:envPath})
 
