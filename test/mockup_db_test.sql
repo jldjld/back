@@ -1,5 +1,5 @@
-DROP TABLE IF E
-XISTS `users`;
+DROP TABLE IF EXISTS `users`;
+
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL,
