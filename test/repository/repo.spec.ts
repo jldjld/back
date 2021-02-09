@@ -17,7 +17,6 @@ describe("Test user repository", () => {
                 expect(results.length).to.equal(3)
             })
             .catch(e => {
-                console.log(e)
                 assert.fail(e)
             })
 

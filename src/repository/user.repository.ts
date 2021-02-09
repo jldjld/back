@@ -11,23 +11,24 @@ class UserRepositoryService {
                     resolve(results.map(row => new User(row)))
                 })
                 .catch(e => {
+                    console.log(e)
                     reject(e)
                 })
         })
     )}
 
-    addUser(name: string, email: string) : Promise<any>
+    addUser(name: string, email: string) 
     {
-        const queryString = `INSERT INTO users (name, email) VALUES (${name}, ${email});`
-        return (new Promise((resolve, reject) => {
-            DB.query(queryString)
-                .then((results: any) => {
-                    resolve(results)
-                })
-                .catch(e => {
-                    reject(e)
-                })
-        }))
+        // const queryString = `INSERT INTO users (name, email) VALUES (${name}, ${email});`
+        // return (new Promise((resolve, reject) => {
+        //     DB.query(queryString)
+        //         .then((results: any) => {
+        //             resolve(results)
+        //         })
+        //         .catch(e => {
+        //             reject(e)
+        //         })
+        // }))
     }
 }
 
