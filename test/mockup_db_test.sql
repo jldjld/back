@@ -1,8 +1,4 @@
-DROP DATABASE IF EXISTS simplon_groupx_tests;
-
-CREATE DATABASE simplon_groupx_tests;
-USE simplon_groupx_tests;
-
+DROP TABLE IF EXISTS users;
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `name` varchar(45) DEFAULT NULL,
