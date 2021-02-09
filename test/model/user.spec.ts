@@ -1,7 +1,3 @@
-import * as dotenv from "dotenv"
-
-const envPath = __dirname + "../../.env.test"
-dotenv.config({path:envPath})
 
 import * as chai from "chai";
 import "mocha";
