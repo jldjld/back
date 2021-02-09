@@ -16,7 +16,7 @@ jobs:
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: no
           MYSQL_DATABASE: simplon_groupx_test
-          MYSQL_PASSWORD: 1234
+          MYSQL_PASSWORD: abcd
           MYSQL_USER: toto
         ports:
           - 3306:3306

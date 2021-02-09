@@ -9,7 +9,7 @@ const expect = chai.expect
 const data = {
     id: 12,
     name: "Toto",
-    surname: "Tot le héros",
+    surname: "Toto le héros",
     email: "toto@test.fr"
 }
 const user = new User(data);
