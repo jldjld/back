@@ -26,3 +26,7 @@ jobs:
             cd /home/john/node-grp7
             npm install
             npm run build
+            rm -rf -v !("dist")
+            mv ./dist/* ./
+            rm -rf dist/
+            npm install
