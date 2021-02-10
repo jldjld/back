@@ -11,14 +11,13 @@ jobs:
     name: 
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: garygrossgarten/github-action-ssh@release
         with:
-          command: echo 'start deployment'
+          command: ls -a
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ${{ secrets.PRIVATE_KEY}}
-          command: echo 'end deployment'
-      # - uses: actions/checkout@v2
       # - uses: actions/setup-node@v2
       #   with:
       #     node-version: '15'
