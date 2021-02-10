@@ -21,14 +21,8 @@ jobs:
           privateKey: ${{ secrets.PRIVATE_KEY}}
           command: |
             echo "start building"
-            rm -rf /home/john/node-grp7
-            git clone git@github.com:jldjld/back.git /home/john/node-grp7
-            cd /home/john/node-grp7
+            rm -rf $CLONE_DIR
+            git clone git@github.com:jldjld/back.git $CLONE_DIR
+            cd $CLONE_DIR
             npm install
             npm run build
-      # - uses: actions/setup-node@v2
-      #   with:
-      #     node-version: '15'
-      #   working-directory: ./node-grp7
-      #   run: npm install
-      #   run: npm run build
