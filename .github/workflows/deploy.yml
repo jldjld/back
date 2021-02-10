@@ -1,0 +1,21 @@
+name: group7-0-deploy
+on:
+  push:
+    branches:
+      - dev
+  pull_request:
+    branches:
+      - dev
+jobs:
+  deploy:
+    name: 
+    runs-on: ubuntu-latest
+    steps:
+      #- uses: actions/checkout@v2
+      - uses: garygrossgarten/github-action-ssh@release
+        with:
+          command: ls -a
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          passphrase: 
+          privateKey: ${{ secrets.PRIVATE_KEY}}
