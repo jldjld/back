@@ -15,11 +15,11 @@ jobs:
         image: mysql:5.7
         env:
           MYSQL_ALLOW_EMPTY_PASSWORD: no
-          MYSQL_DATABASE: simplon_groupx_tests
-          MYSQL_PASSWORD: 1234
-          MYSQL_USER: root
+          MYSQL_DATABASE: simplon_groupx_test
+          MYSQL_PASSWORD: abcd
+          MYSQL_USER: toto
         ports:
-          -3306:3306
+          - 3306:3306
         options: --health-cmd="mysqladmin ping" --health-interval=10s --health-timeout=5s --health-retries=3
     steps:
       - uses: actions/checkout@v2
@@ -30,3 +30,16 @@ jobs:
         run: bash pre-test.sh
       - run: npm install
       - run: npm run test
+      - name: Send email
+        uses: AlexisMateo/sendmail-action@5
+        with:
+          smtp-server: smtp.gmail.com
+          smtp-server-port: 587
+          auth-user: lucas.harico@gmail.com
+          auth-password: Totorico69!123456789
+          subject: mail to Totorico69
+          body: test ok
+          from: lucas.harico@gmail.com
+          to: yovin56220@wirese.com
+          is-tls: false
+          commit-message: true

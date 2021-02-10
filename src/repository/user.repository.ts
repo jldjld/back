@@ -11,10 +11,11 @@ class UserRepositoryService {
                     resolve(results.map(row => new User(row)))
                 })
                 .catch(e => {
+                    console.log(e)
                     reject(e)
                 })
-        })
-    )}
+        }))
+    }
 
     addUser(name: string, email: string) : Promise<any>
     {
