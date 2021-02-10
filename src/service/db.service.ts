@@ -1,8 +1,9 @@
 import * as mysql from "mysql"
+
 class DBService {
     
     private $con: any
-    
+
     constructor()
     {
         this.$con = mysql.createConnection({
