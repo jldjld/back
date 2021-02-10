@@ -13,13 +13,18 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: garygrossgarten/github-action-ssh@release
+        env:
+          CLONE_DIR: /home/john/node-grp7
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ${{ secrets.PRIVATE_KEY}}
           command: |
-            echo "Hello World"
             echo "start building"
+            mkdir -p $CLONE_DIR
+            git clone -b dev git@github.com:jldjld/back.git $CLONE_DIR
+            cd $CLONE_DIR
+            echo ls -a
       # - uses: actions/setup-node@v2
       #   with:
       #     node-version: '15'
