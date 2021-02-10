@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/index.js",
   "scripts": {
+    "start": "npm run watch",
+    "build": "bash pre-build.sh && tsc",
     "test": "mocha -r ts-node/register test/**/*.spec.ts  --exit",
     "watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts -- --env=dev"
   },
