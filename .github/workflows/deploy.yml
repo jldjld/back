@@ -14,8 +14,9 @@ jobs:
       #- uses: actions/checkout@v2
       - uses: garygrossgarten/github-action-ssh@release
         with:
-          command: ls -a
+          command: echo 'everything is working'
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           passphrase: 
           privateKey: ${{ secrets.PRIVATE_KEY}}
+          
