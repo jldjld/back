@@ -17,7 +17,9 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           privateKey: ${{ secrets.PRIVATE_KEY}}
-          script: echo "Hello World!"
+          command: |
+            echo "Hello World"
+            echo "start building"
       # - uses: actions/setup-node@v2
       #   with:
       #     node-version: '15'
