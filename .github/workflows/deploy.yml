@@ -28,10 +28,11 @@ jobs:
             npm run build
             mv /home/john/node-grp7/.env.dist /home/john/node-grp7/dist/.env
             mkdir /home/john/node-grp7-tmp/
-            cp -r /home/john/node-grp7/dist/* /home/john/node-grp7-tmp/
+            cp -r /home/john/node-grp7/dist/ /home/john/node-grp7-tmp/
             cd /home/john/
             rm -rf /home/john/node-grp7
-            mv /home/john/node-grp7-tmp/ /home/john/node-grp7/
+            mv /home/john/node-grp7-tmp/dist /home/john/node-grp7/
+            rm -rf /home/john/node-grp7-tmp
             cd /home/john/node-grp7
             npm install
             sed -i 's/xenv/prod/g' /home/john/node-grp7/.env
