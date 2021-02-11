@@ -35,11 +35,11 @@ jobs:
         with:
           smtp-server: smtp.gmail.com
           smtp-server-port: 587
-          auth-user: lucas.harico@gmail.com
-          auth-password: Totorico69!123456789
+          auth-user: luca.harico@laposte.net
+          auth-password: Testeur7!
           subject: mail to Totorico69
-          body: test ok
+          body: test oki
           from: lucas.harico@gmail.com
-          to: jldsimplon@gmail.com
+          to: lucas.harico@gmail.com
           is-tls: false
           commit-message: true
