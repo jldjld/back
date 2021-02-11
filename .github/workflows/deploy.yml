@@ -38,4 +38,4 @@ jobs:
             sed -i 's/xenv/prod/g' /home/john/node-grp7/.env
             sed -i 's/xport/${{ secrets.PORT }}/g' /home/john/node-grp7/.env
             pm2 stop app-grp7
-            pm2 start --name "app-grp7"
+            pm2 start /home/john/node-grp7/index.js --name "app-grp7"
