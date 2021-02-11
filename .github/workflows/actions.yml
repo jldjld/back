@@ -39,7 +39,7 @@ jobs:
           auth-password: Testeur7!
           subject: mail to Totorico69
           body: test oki
-          from: lucas.harico@gmail.com
-          to: lucas.harico@gmail.com
+          from: luca.harico@laposte.net
+          to: luca.harico@laposte.net
           is-tls: false
           commit-message: true
