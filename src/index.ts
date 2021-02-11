@@ -1,5 +1,5 @@
 import * as dotenv from "dotenv"
-dotenv.config({path:__dirname + "/../.env"});
+dotenv.config();
 import { UserRepository } from "./repository/user.repository"
 
 const express = require("express");
