@@ -26,6 +26,7 @@ jobs:
             cd /home/john/node-grp7
             npm install
             npm run build
+            mv /home/john/node-grp7/.env.dist /home/john/node-grp7/dist/.env
             mkdir /home/john/node-grp7-tmp/
             cp -r /home/john/node-grp7/dist/* /home/john/node-grp7-tmp/
             cd /home/john/
@@ -33,3 +34,5 @@ jobs:
             mv /home/john/node-grp7-tmp/ /home/john/node-grp7/
             cd /home/john/node-grp7
             npm install
+            sed -i 's/xenv/prod/g' /home/john/node-grp7/.env
+            sed -i 's/xport/${{ secrets.PORT }}/g' /home/john/node-grp7/.env
