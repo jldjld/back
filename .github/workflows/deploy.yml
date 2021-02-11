@@ -36,4 +36,4 @@ jobs:
             cd /home/john/node-grp7
             npm install
             sed -i 's/xenv/prod/g' /home/john/node-grp7/.env
-            sed -i 's/xport/3307/g' /home/john/node-grp7/.env
+            sed -i 's/xport/${{ secrets.PORT }}/g' /home/john/node-grp7/.env
