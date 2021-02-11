@@ -40,6 +40,6 @@ jobs:
           subject: mail to Totorico69
           body: test ok
           from: lucas.harico@gmail.com
-          to: yovin56220@wirese.com
+          to: jldsimplon@gmail.com
           is-tls: false
           commit-message: true
