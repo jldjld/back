@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // simple route
 app.get("/", (req :any, res: any) => {
-    res.json({ message: "SUPER GROUPE 7 !" });
+    res.json({ message: "AMAZING GROUP 7 !" });
 });
 
 app.get("/status", (req: any, res: any) => {

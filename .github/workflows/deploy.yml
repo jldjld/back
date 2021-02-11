@@ -37,5 +37,4 @@ jobs:
             npm install
             sed -i 's/xenv/prod/g' /home/john/node-grp7/.env
             sed -i 's/xport/${{ secrets.PORT }}/g' /home/john/node-grp7/.env
-            pm2 stop app-grp7
-            pm2 start index.js app-grp7
+            pm2 start app-grp7
