@@ -1,12 +1,13 @@
 import * as dotenv from "dotenv"
 dotenv.config();
+import * as cors from "cors"
 import { UserRepository } from "./repository/user.repository"
 
 const express = require("express");
 const bodyParser = require("body-parser");
 
 const app = express();
-
+app.use(cors());
 // parse requests of content-type: application/json
 app.use(bodyParser.json());
 
