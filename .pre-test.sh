@@ -1,3 +1,3 @@
 
-cat ./test/back.sql | mysql -hlocalhost -usimplon -p1234
-cat ./test/back_test.sql | mysql -hlocalhost -usimplon -p1234 back_test
+cat ./test/create_db_test.sql | mysql -h127.0.0.1 -utoto -pabcd 
+cat ./test/mockup_db_test.sql | mysql -h127.0.0.1 -utoto -pabcd simplon_groupx_test
