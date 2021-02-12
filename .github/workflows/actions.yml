@@ -8,15 +8,9 @@ on:
       - dev
 jobs:
   test:
-<<<<<<< Updated upstream
     name: Run tests
     runs-on: ubuntu-latest
     services:
-=======
-  name: Run tests
-  runs-on: ubuntu-latest
-  services:
->>>>>>> Stashed changes
       mysql:
         image: mysql:5.7
         env:
