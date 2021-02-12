@@ -18,13 +18,13 @@ app.get("/", (req :any, res: any) => {
     res.json({ message: "MARVELOUS GROUP 7 !" });
 });
 
+// test HTTP status route
 app.get("/status", (req: any, res: any) => {
     res.status(200).json({ message: "Ok 200" })
 })
 
 app.get("/users", (req: any,res: any) => {
     const limit = req.query.limit
-    /*
     UserRepository.getUsers(limit)
         .then((users: any) => {
             res.json({users})
@@ -32,7 +32,6 @@ app.get("/users", (req: any,res: any) => {
         .catch(e => {
             res.json(500, e.toString())
         })
-        */
 })
 
 app.post("/users", (req: any, res: any) => {
