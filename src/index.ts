@@ -19,7 +19,7 @@ app.get("/", (req :any, res: any) => {
 });
 
 app.get("/status", (req: any, res: any) => {
-    res(200).json("Ok")
+    res.status(200).json({ message: "Ok 200" })
 })
 
 app.get("/users", (req: any,res: any) => {

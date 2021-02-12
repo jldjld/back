@@ -48,5 +48,5 @@ jobs:
       - name: Check http status code of API
         uses: lakuapik/gh-actions-http-status@v1
         with:
-          sites: '["http://grp7.360medics.com:8080/"]'
+          sites: '["http://grp7.360medics.com:8080/status"]'
           expected: '[200]'
