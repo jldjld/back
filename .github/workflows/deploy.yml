@@ -37,8 +37,7 @@ jobs:
             sed -i 's/xport/${{ secrets.PORT }}/g' /home/john/node-grp7/.env
             pm2 stop app-grp7 > /dev/null 2>&1
             pm2 start /home/john/node-grp7/index.js --name "app-grp7"
-      - name: Check HTTP Status
-        uses: lakuapik/gh-actions-http-status@v1
+      - uses: lakuapik/gh-actions-http-status@v1
         with:
           sites: ["http://grp7.360medics.com:8080/"]
           expected: '[200]'
