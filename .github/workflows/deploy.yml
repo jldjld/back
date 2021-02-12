@@ -21,19 +21,19 @@ jobs:
           privateKey: ${{ secrets.PRIVATE_KEY}}
           command: |
             echo "start building"
-            rm -rf $CLONE_DIR
+            rm -rf /home/john/node-grp7
             git clone -b dev git@github.com:jldjld/back.git /home/john/node-grp7/
-            cd $CLONE_DIR
+            cd /home/john/node-grp7
             npm install
             npm run build
             mv /home/john/node-grp7/.env.dist /home/john/node-grp7/dist/.env
             mkdir /home/john/node-grp7-tmp/
             cp -r /home/john/node-grp7/dist/ /home/john/node-grp7-tmp/
             cd /home/john/
-            rm -rf $CLONE_DIR
-            mv /home/john/node-grp7-tmp/dist $CLONE_DIR/
+            rm -rf /home/john/node-grp7
+            mv /home/john/node-grp7-tmp/dist /home/john/node-grp7/
             rm -rf /home/john/node-grp7-tmp
-            cd $CLONE_DIR
+            cd /home/john/node-grp7
             npm install
             sed -i 's/xenv/prod/g' /home/john/node-grp7/.env
             sed -i 's/xport/${{ secrets.PORT }}/g' /home/john/node-grp7/.env
