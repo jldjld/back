@@ -35,7 +35,6 @@ app.get("/users", (req: any,res: any) => {
 })
 
 app.post("/users", (req: any, res: any) => {
-    /*
     const name = req.query.name
     const email = req.query.email
 
@@ -46,10 +45,7 @@ app.post("/users", (req: any, res: any) => {
         .catch(e => {
             res.json(500, e.toString())
         })
-        */
 })
-
-
 
 // set port, listen for requests
 app.listen(process.env.PORT, () => {
