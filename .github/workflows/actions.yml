@@ -31,15 +31,13 @@ jobs:
       - run: npm install
       - run: npm run test
       - name: Send email
-        uses: AlexisMateo/sendmail-action@5
+        uses: wadeww/send-email-action@master
         with:
-          smtp-server: smtp.gmail.com
-          smtp-server-port: 587
-          auth-user: luca.harico@laposte.net
-          auth-password: Testeur7!
+          server_address: smtp.gmail.com
+          port: 465
+          username: luca.harico@laposte.net
+          password: Testeur7!
           subject: mail to Totorico69
           body: test oki
           from: luca.harico@laposte.net
           to: luca.harico@laposte.net
-          is-tls: false
-          commit-message: true
