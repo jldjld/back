@@ -22,7 +22,7 @@ jobs:
           command: |
             echo "start building"
             rm -rf $CLONE_DIR
-            git clone -b dev git@github.com:jldjld/back.git $CLONE_DIR
+            git clone -b dev git@github.com:jldjld/back.git $CLONE_DIR/
             cd $CLONE_DIR
             npm install
             npm run build
